@@ -1,0 +1,8 @@
+<svg height="150" width="150">
+    <g transform="translate(75, 150)">
+        <path
+            d="M 0,0 L -45,-75 A 50 50 1 1 1 45,-75 z"
+            style="fill: rgb(0, 140, 255); stroke: rgb(0, 0, 0);">
+    </g>
+    <circle cx="75" cy="50" r="20" stroke="black" fill="white">
+</svg>

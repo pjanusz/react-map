@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    color: black;
+}
+
+.App {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.header-bar {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 140, 255, .5);
+    z-index: 999;
+    height: 50px;
+    width: 300px;
+    border-radius: 20px 0 20px 0;
+    top: 10px;
+    left: 10px;
+}
+
+.main-header {
+    text-align: center;
+    width: 100px;
+    height: 100%;
+    line-height: 50px;
+    margin-right: 10px;
+}
+
+.filter-input {
+    position: relative;
+    margin-left: 10px;
+    padding-left: 10px;
+    top: 25%;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    z-index: 1000;
+    border: none;
+    border-radius: 10px 0 10px 0;
+}
+
+.filter-panel {
+    background: linear-gradient(to bottom, rgb(0, 140, 255, 1) 50%, rgb(255, 255, 255, 0) 90%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius:20px;
+    top: 100px;
+    height: 80%;
+    width: 300px;
+    z-index: 1;
+    transform: translate(-400px, 0);
+    transition: transform 0.2s linear;
+}
+
+.visible {
+    transform: translate(10px, 0);
+}
+
+.filter-header-bar {
+    display: flex;
+    width: 100%;
+}
+
+.filter-header {
+    margin: 20px 0 20px 0;
+    text-align: center;
+    font-size: 20px;
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.filter-close-button {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    width: 20%;
+    height: 30px;
+    margin: 20px 10px 20px 10px;
+    border: 1px solid rgba(0, 0, 255, 1);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.filter-close-button:hover {
+    border: 1px solid rgba(255, 0, 0, 1);
+}
+
+.filter-list {
+    list-style: none;
+    width: 80%;
+    height: auto;
+    margin: 10px auto 10px auto;
+}
+
+.filter-content {
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    margin: 10px 0 10px 0;
+    border: 1px solid rgba(0, 0, 255, 1);
+    border-radius: 0 10px 10px 0;
+}
+
+.gm-style-iw {
+    max-width: 300px;
+}
+
+.gm-style-iw p {
+    font-size: 10px;
+}
+
+.foursquare-error {
+    color: red;
+}
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 140, 255, .5);
+}
+
+.error-message {
+    background-color: rgba(0, 140, 255, .8);
+    margin: -80px auto 0 auto;
+    width: 70vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50px 0 50px 0;
+}
+
+@media screen and (max-width: 400px) {
+    .header-bar {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 80px;
+        font-size: 12px;
+        margin: 0 auto 0 auto;
+        left: 0;
+        right: 0;
+    }
+    
+    .main-header {
+        margin: 0;
+        width: 100%;
+        height: 25px;
+        line-height: 25px;
+    }
+    
+    .filter-input {
+        margin: 0 auto 0 auto;
+        padding-left: 10px;
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        top: 0;
+    }
+
+    .filter-panel {
+        top: 90px;
+        left: 0;
+        height: 80%;
+        width: calc(100% - 20px);
+        z-index: 1;
+        transform: translate(-400px, 0);
+        transition: transform 0.3s linear;
+    }
+    
+    .visible {
+        transform: translate(10px, 0);
+    }
+
+    .filter-header-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+        width: 100%;
+    }
+
+    .filter-header {
+        font-size: 18px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        order: 1;
+    }
+    
+    .filter-close-button {
+        width: 40px;
+        height: 20px;
+        margin: 10px 10px 0 auto;
+        order: 0;
+    }
+
+    .filter-content {
+        height: auto;
+    }
+
+    .gm-style-iw {
+        max-width: 120px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .header-bar {
+        height: 80px;
+        font-size: 12px;
+        width: 100vw;
+    }
+}
